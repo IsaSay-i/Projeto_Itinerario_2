@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Igreja Nova Geração | Uma casa, uma família</title>
+    <meta name="description"
+        content="Igreja Nova Geração — uma igreja família, em São Paulo e Rio de Janeiro. Conheça nossa história, pastores, cultos, ministérios e venha nos visitar." />
+    <meta name="theme-color" content="#161617" />
+    <link rel="canonical" href="https://www.novageracao.org/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Igreja Nova Geração" />
+    <meta property="og:title" content="Igreja Nova Geração | Uma casa, uma família" />
+    <meta property="og:description"
+        content="Uma igreja família, em São Paulo e Rio de Janeiro. Conheça nossos cultos, ministérios e unidades." />
+    <meta property="og:image" content="assets/img/logo/hero-poster.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/keyframes.css" />
+    <link rel="stylesheet" href="assets/css/media.css" />
+    <link rel="stylesheet" href="assets/css/refinamentos.css" />
+
+    <link rel="icon" type="image/png" href="assets/img/logo/novo_logo_coracao.png" />
+
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header id="site-header">
+        <div class="wrap">
+            <a href="#topo" class="logo" aria-label="Igreja Nova Geração — início">
+                <img class="mark" src="assets/img/logo/logo_completa.png" alt="Igreja Nova Geração" width="137"
+                    height="40" />
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#quem-somos">Quem somos</a></li>
+                    <li><a href="#pastores">Pastores</a></li>
+                    <li><a href="#cultos">Cultos</a></li>
+                    <li><a href="#ministerios">Ministérios</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#localidades">Unidades</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contato" class="btn btn-outline header-contact-btn">Fale com a gente</a>
+
+            <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="main-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+        <section class="hero" id="topo">
+            <div class="hero-video">
+                <video autoplay muted loop playsinline preload="metadata" poster="assets/img/logo/hero-poster.jpg"
+                    disablepictureinpicture aria-hidden="true" tabindex="-1">
+                    <source src="assets/img/video/video_header.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-bg">
+                <div class="glow glow-1"></div>
+                <div class="glow glow-2"></div>
+                <div class="hero-orb orb-1"></div>
+                <div class="hero-orb orb-2"></div>
+                <div class="hero-orb orb-3"></div>
+            </div>
+
+            <div class="hero-svg hero-svg-1">
+                <svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="heroLineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00a8b8" stop-opacity="0" />
+                            <stop offset="45%" stop-color="#00a8b8" stop-opacity=".8" />
+                            <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M480 20 C350 80 390 190 270 230 C150 270 190 370 90 430 C20 470 60 570 0 650" fill="none"
+                        stroke="url(#heroLineGradient)" stroke-width="1.5" />
+                    <path d="M500 90 C380 130 420 240 300 280 C180 320 220 420 120 480 C50 520 90 610 30 690"
+                        fill="none" stroke="url(#heroLineGradient)" stroke-width="1" opacity=".5" />
+                    <circle cx="270" cy="230" r="5" fill="#00a8b8" />
+                    <circle cx="90" cy="430" r="3" fill="#ffffff" />
+                </svg>
+            </div>
+
+            <div class="hero-svg hero-svg-2">
+                <svg viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <circle cx="225" cy="225" r="170" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                    <circle cx="225" cy="225" r="125" fill="none" stroke="rgba(0,168,184,.32)" stroke-width="1" />
+                    <circle cx="225" cy="225" r="70" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="1" />
+                    <path d="M225 30 L225 420 M30 225 L420 225" stroke="rgba(255,255,255,.08)" stroke-width="1" />
+                    <circle cx="225" cy="225" r="7" fill="#00a8b8" />
+                </svg>
+            </div>
+
+            <div class="hero-particles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="wrap hero-content">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow"><span>Igreja Nova Geração</span></p>
+                    <h1>Uma casa, uma família, <span>para toda a vida.</span></h1>
+                    <p class="lede">
+                        Somos uma igreja família. Há décadas pregando o evangelho de Jesus e recebendo pessoas de
+                        braços abertos.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#quem-somos" class="btn btn-primary">
+                            <span>Conheça nossa história</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M5 12h13M13 6l6 6-6 6" />
+                            </svg>
+                        </a>
+                        <a href="#cultos" class="btn btn-outline">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path
+                                    d="M7 3v4 M17 3v4 M4 9h16 M5 5h14 a1 1 0 0 1 1 1v14 a1 1 0 0 1-1 1H5 a1 1 0 0 1-1-1V6 a1 1 0 0 1 1-1" />
+                            </svg>
+                            <span>Ver horários dos cultos</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <div class="hero-meta-item">
+                            <span class="meta-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M12 21 s7-5.2 7-11 a7 7 0 1 0-14 0 c0 5.8 7 11 7 11z" />
+                                    <circle cx="12" cy="10" r="2.5" />
+                                </svg>
+                            </span>
+                            <span><strong>São Paulo</strong><small>Rio de Janeiro</small></span>
+                        </div>
+                        <div class="hero-meta-divider"></div>
+                        <div class="hero-meta-item">
+                            <span class="meta-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <circle cx="12" cy="12" r="8" />
+                                    <path d="M12 7v5l3 2" />
+                                </svg>
+                            </span>
+                            <span><strong>Venha nos visitar</strong><small>Você será muito bem-vindo</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#quem-somos" class="hero-scroll" aria-label="Rolar para a próxima seção">
+                <span>Explore</span>
+                <span class="hero-scroll-line"><i></i></span>
+            </a>
+
+            <div class="hero-wave" aria-hidden="true">
+                <svg viewBox="0 0 1440 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+                    focusable="false">
+                    <path d="M0 70 C180 120 330 120 520 72 C720 22 870 22 1080 70 C1220 102 1330 105 1440 70 V130 H0 Z"
+                        fill="#161617" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="section-pad quemsomos-section" id="quem-somos" aria-labelledby="quem-somos-title">
+            <div class="qs-bg-shape qs-bg-shape-1"></div>
+            <div class="qs-bg-shape qs-bg-shape-2"></div>
+            <div class="wrap">
+                <div class="qs-grid reveal">
+                    <div class="qs-intro">
+                        <p class="qs-label"><span class="qs-label-line"></span><span>Quem somos</span></p>
+                        <div class="qs-number" aria-hidden="true"><span>01</span></div>
+                        <h2 class="qs-heading" id="quem-somos-title">Conheça <span>a
+                                nossa</span><strong>igreja.</strong>
+                        </h2>
+                        <div class="qs-decoration" aria-hidden="true"><span></span><span></span><span></span></div>
+                    </div>
+
+                    <div class="qs-content">
+                        <div class="qs-highlight">
+                            <span class="qs-highlight-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path
+                                        d="M20 11.5C20 16.75 16.5 20 12 20s-8-3.25-8-8.5C4 7.5 7.2 4 12 4s8 3.5 8 7.5Z" />
+                                    <path d="M8.5 12.5c1.3 1.2 2.3 1.8 3.5 1.8s2.2-.6 3.5-1.8" />
+                                </svg>
+                            </span>
+                            <div><small>Uma igreja família</small><strong>Um lugar para pertencer.</strong></div>
+                        </div>
+
+                        <div class="qs-copy">
+                            <p class="qs-lead">
+                                A <strong>Igreja Nova Geração</strong> nasceu de uma história de transformação. Na
+                                década de 1950, Joseph Pagliarin, então um homem afastado da fé, encontrou uma Bíblia
+                                que mudou o rumo de sua vida e da sua família, dando <strong>início à primeira de
+                                    quatro gerações de pregadores do Evangelho</strong>. Em 1953, Elza Pagliarin recebeu
+                                uma <strong>visão profética</strong> que anos depois compreendeu representar seus quatro
+                                filhos, chamados por Deus para levar a Palavra <i>"aos quatro cantos da Terra"</i>.
+                            </p>
+                            <p>
+                                Um deles, o Pastor João Misael Pagliarin, <strong>fundou oficialmente o ministério em 28
+                                    de março de 2002</strong>, e em <strong>25 de maio de 2008</strong> a igreja viveu
+                                uma nova unção que marcou <strong>o início de um novo tempo</strong>.
+                            </p>
+                        </div>
+
+                        <div class="qs-pillars">
+                            <div class="qs-pillar">
+                                <span class="qs-pillar-number" aria-hidden="true">01</span>
+                                <div>
+                                    <strong>Fé</strong>
+                                    <p>Vivemos uma fé que transforma.</p>
+                                </div>
+                            </div>
+                            <div class="qs-pillar">
+                                <span class="qs-pillar-number" aria-hidden="true">02</span>
+                                <div>
+                                    <strong>Família</strong>
+                                    <p>Caminhamos juntos como uma família.</p>
+                                </div>
+                            </div>
+                            <div class="qs-pillar">
+                                <span class="qs-pillar-number" aria-hidden="true">03</span>
+                                <div>
+                                    <strong>Propósito</strong>
+                                    <p>Vivemos aquilo que Deus preparou.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qs-leadership">
+                            <div class="qs-leadership-line" aria-hidden="true"></div>
+                            <p>
+                                Sob a liderança do <strong>Pastor João Misael Pagliarin</strong> e da <strong>Pastora
+                                    Edna Pagliarin</strong>, seguimos formando discípulos e recebendo cada pessoa como
+                                parte da família, desde o primeiro culto.
+                            </p>
+                        </div>
+
+                        <div class="qs-footer">
+                            <a href="https://www.instagram.com/igrejanovageracao/" class="btn btn-outline qs-cta">
+                                Conheça nossa história
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M5 12h13" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                            </a>
+                            <span class="qs-footer-note">Uma família para você pertencer.</span>
+                        </div>
+                    </div>
+
+                    <div class="v-tag" aria-hidden="true"><span>sobre</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pad pastores-section section-div" id="pastores" aria-labelledby="pastores-title">
+            <div class="pastores-bg-number" aria-hidden="true">02</div>
+            <div class="wrap">
+                <div class="pastores-head reveal">
+                    <div>
+                        <p class="pastores-eyebrow"><span></span>Liderança</p>
+                        <h2 id="pastores-title">Quem cuida da <em>nossa família.</em></h2>
+                    </div>
+                    <p>Uma vida dedicada a servir, ensinar e cuidar da família Nova Geração.</p>
+                </div>
+
+                <div class="pastores-list reveal">
+                    <article class="pastor-card pastor-card-joao">
+                        <div class="pastor-photo">
+                            <img src="assets/img/liderança/pastorPagliarin.jpg" alt="Pastor João Misael Pagliarin"
+                                loading="lazy" decoding="async" />
+                            <div class="pastor-photo-overlay"></div>
+                            <div class="pastor-photo-label"><span>Pastor presidente</span></div>
+                        </div>
+                        <div class="pastor-info">
+                            <div class="pastor-info-top">
+                                <span class="pastor-small-title">Pastor</span>
+                                <span class="pastor-line"></span>
+                            </div>
+                            <h3>João Misael <span>Pagliarin</span></h3>
+                            <p>
+                                Ao lado da esposa Edna, tem pregado o evangelho de Jesus nos quatro cantos da terra.
+                                Pai de três filhos — Samuel, Kelen e Michel —, segue liderando a igreja com o
+                                compromisso de anunciar a Palavra até o fim da caminhada.
+                            </p>
+                            <div class="pastor-bottom">
+                                <span>Igreja Nova Geração</span>
+                                <a class="pastor-arrow" href="https://www.instagram.com/joaomisael.oficial/"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Instagram do Pastor João Misael">
+                                    ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pastor-card pastor-card-edna">
+                        <div class="pastor-photo">
+                            <img src="assets/img/liderança/pastoraPagliarin.jpg" alt="Pastora Edna Pagliarin"
+                                loading="lazy" decoding="async" />
+                            <div class="pastor-photo-overlay"></div>
+                            <div class="pastor-photo-label"><span>Pastora presidente</span></div>
+                        </div>
+                        <div class="pastor-info">
+                            <div class="pastor-info-top">
+                                <span class="pastor-small-title">Pastora</span>
+                                <span class="pastor-line"></span>
+                            </div>
+                            <h3>Edna <span>Pagliarin</span></h3>
+                            <p>
+                                Casada com o Pastor João Misael, tem servido lado a lado na condução da igreja família,
+                                com um cuidado especial pelas pessoas e pelas famílias que chegam à Nova Geração.
+                            </p>
+                            <div class="pastor-bottom">
+                                <span>Igreja Nova Geração</span>
+                                <a class="pastor-arrow" href="https://www.instagram.com/igrejanovageracao/"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Instagram da Pastora Edna Pagliarin">
+                                    ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pad section-div cultos-section" id="cultos" aria-labelledby="cultos-title">
+            <div class="cultos-decoration" aria-hidden="true">
+                <svg viewBox="0 0 300 300" focusable="false">
+                    <circle cx="150" cy="150" r="110"></circle>
+                    <circle cx="150" cy="150" r="75"></circle>
+                </svg>
+            </div>
+            <div class="wrap">
+                <div class="cultos-head reveal">
+                    <div>
+                        <p class="cultos-eyebrow"><span></span>Agenda semanal</p>
+                        <h2 id="cultos-title">Separe o seu <em>horário.</em></h2>
+                    </div>
+                    <p>Cultos e encontros para você caminhar com a gente durante a semana.</p>
+                </div>
+                <div class="cultos-list" id="cultos-list"></div>
+                <div class="cultos-footer reveal">
+                    <span class="cultos-footer-line" aria-hidden="true"></span>
+                    <p>Consulte a unidade antes da sua visita.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="localidades-v2 section-div" id="localidades" aria-labelledby="localidades-title">
+            <div class="localidades-v2-bg-number" aria-hidden="true">04</div>
+            <div class="wrap">
+                <header class="localidades-v2-header reveal">
+                    <div>
+                        <p class="localidades-v2-eyebrow"><i></i>Onde estamos</p>
+                        <h2 id="localidades-title">Nossos locais.</h2>
+                    </div>
+                    <div class="localidades-v2-intro">
+                        <span aria-hidden="true">04</span>
+                        <p>Encontre uma Igreja Nova Geração <strong>perto de você.</strong></p>
+                    </div>
+                </header>
+
+                <div class="localidades-search">
+                    <label class="sr-only" for="busca-localidade">Buscar unidade por bairro ou cidade</label>
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m20 20-3.5-3.5"></path>
+                    </svg>
+                    <input type="search" id="busca-localidade" placeholder="Buscar por bairro ou cidade"
+                        autocomplete="off" />
+                    <span class="localidades-search-count" id="localidades-count" aria-live="polite"></span>
+                </div>
+
+                <div class="localidades-v2-list" id="localidades-list"></div>
+                <p class="localidades-empty" id="localidades-empty" hidden>
+                    Nenhuma unidade encontrada. Tente outro bairro ou cidade.
+                </p>
+
+                <div class="localidades-v2-footer reveal" aria-hidden="true">
+                    <span></span>
+                    <p>Igreja Nova Geração</p>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pad section-div ministerios-section" id="ministerios"
+            aria-labelledby="ministerios-title">
+            <div class="ministerios-bg-number" aria-hidden="true">05</div>
+            <div class="wrap">
+                <div class="ministerios-header reveal">
+                    <div>
+                        <p class="ministerios-label"><i></i>Sirva com a gente</p>
+                        <h2 id="ministerios-title">Um lugar para <em>servir e crescer.</em></h2>
+                    </div>
+                    <div class="ministerios-intro">
+                        <span class="ministerios-index" aria-hidden="true">05</span>
+                        <p>
+                            Cada ministério é uma porta de entrada para servir com o que você tem de melhor.
+                            <strong>Encontre o seu lugar.</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="ministerios-list" id="ministerios-list"></div>
+                <div class="ministerios-footer reveal" aria-hidden="true">
+                    <span class="ministerios-footer-line"></span>
+                    <span>Encontre o seu lugar</span>
+                    <span class="ministerios-footer-line"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pad section-div eventos-section" id="eventos" aria-labelledby="eventos-title">
+            <div class="eventos-bg-number" aria-hidden="true">06</div>
+            <div class="wrap">
+                <header class="eventos-header reveal">
+                    <div class="eventos-header-main">
+                        <p class="eventos-eyebrow"><i></i>Próximos eventos</p>
+                        <h2 id="eventos-title">Agenda da nossa <em>família.</em></h2>
+                    </div>
+                    <div class="eventos-header-side">
+                        <span class="eventos-index" aria-hidden="true">06</span>
+                        <p>
+                            Encontros, conferências, retiros e momentos especiais para vivermos juntos.
+                            <strong>Escolha seu próximo encontro.</strong>
+                        </p>
+                    </div>
+                </header>
+
+                <div class="eventos-carousel-wrap reveal">
+                    <button class="eventos-nav eventos-prev" type="button" aria-label="Evento anterior"
+                        id="eventos-prev"><span aria-hidden="true">←</span></button>
+                    <div class="eventos-track" id="eventos-track" tabindex="0" role="group"
+                        aria-label="Lista de eventos"></div>
+                    <button class="eventos-nav eventos-next" type="button" aria-label="Próximo evento"
+                        id="eventos-next"><span aria-hidden="true">→</span></button>
+                </div>
+
+                <div class="eventos-footer reveal">
+                    <div class="eventos-progress">
+                        <span class="eventos-progress-current" id="eventos-current">01</span>
+                        <div class="eventos-progress-line"><span id="eventos-progress-bar"></span></div>
+                        <span class="eventos-progress-total" id="eventos-total">01</span>
+                    </div>
+                    <span class="eventos-footer-text">Deslize para explorar</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pad online-section section-div" id="online" aria-labelledby="online-title">
+            <div class="online-bg-number" aria-hidden="true">07</div>
+            <div class="wrap">
+                <div class="online-layout reveal">
+                    <div class="online-content">
+                        <p class="online-eyebrow"><i></i>Nova Geração online</p>
+                        <h2 id="online-title">Continue <em>conectado.</em></h2>
+                        <p>
+                            Acompanhe nossos cultos, ministrações e conteúdos pelas redes sociais e pelo nosso canal no
+                            YouTube. Esteja com a gente onde você estiver.
+                        </p>
+                        <div class="online-actions">
+                            <a href="https://www.youtube.com/joaomisael" target="_blank" rel="noopener"
+                                class="online-btn online-btn-primary">
+                                <span><small>Assista</small>YouTube</span>
+                                <i aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M8 5v14l11-7z"></path>
+                                    </svg></i>
+                            </a>
+                            <a href="https://instagram.com/igrejanovageracao" target="_blank" rel="noopener"
+                                class="online-btn online-btn-secondary">
+                                <span><small>Siga a gente</small>Redes sociais</span>
+                                <i aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M13 6l6 6-6 6"></path>
+                                    </svg></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="online-media">
+                        <a class="online-image" href="https://www.youtube.com/joaomisael" target="_blank" rel="noopener"
+                            aria-label="Assistir no canal do YouTube">
+                            <img src="assets/img/logo/fachada_igreja.jpeg" alt="" loading="lazy" decoding="async" />
+                            <span class="online-image-overlay" aria-hidden="true"></span>
+                            <span class="online-image-content"><span>Igreja Nova Geração</span><strong>Ao
+                                    vivo</strong></span>
+                            <span class="online-play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg>
+                            </span>
+                        </a>
+                        <span class="online-media-line" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pad section-div" id="contato" aria-labelledby="contato-title">
+            <div class="wrap">
+                <div class="contato-grid">
+                    <div class="contato-info reveal">
+                        <p class="eyebrow">Contato</p>
+                        <h2 id="contato-title">Vamos conversar</h2>
+                        <p>
+                            Tem uma dúvida, um pedido de oração ou quer saber mais sobre algum ministério? Fale com a
+                            gente — respondemos com carinho.
+                        </p>
+
+                        <div class="contato-item">
+                            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" />
+                                </svg></span>
+                            <div><strong>Templo Sede</strong><span>Av. Celso Garcia, 5293 — Tatuapé, São Paulo</span>
+                            </div>
+                        </div>
+
+                        <div class="contato-item">
+                            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" />
+                                </svg></span>
+                            <div><strong>Unidade Rio de Janeiro</strong><span>Av. Dom Helder Câmara, 9932 —
+                                    Cascadura</span></div>
+                        </div>
+
+                        <div class="contato-item">
+                            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                    <path
+                                        d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.25 1.02z" />
+                                </svg></span>
+                            <div><strong>WhatsApp</strong><a href="https://wa.me/5511999999999" target="_blank"
+                                    rel="noopener">(11) 99999-9999</a></div>
+                        </div>
+
+                        <div class="contato-item">
+                            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                    <path
+                                        d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z" />
+                                </svg></span>
+                            <div><strong>E-mail</strong><a
+                                    href="mailto:contato@novageracao.org">contato@novageracao.org</a></div>
+                        </div>
+
+                        <div class="socials">
+                            <a href="https://instagram.com/igrejanovageracao" target="_blank" rel="noopener"
+                                aria-label="Instagram da Igreja Nova Geração"><svg viewBox="0 0 24 24"
+                                    aria-hidden="true" focusable="false">
+                                    <path
+                                        d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47a4.9 4.9 0 011.77 1.15 4.9 4.9 0 011.15 1.77c.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.77 4.9 4.9 0 01-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43a4.9 4.9 0 011.15-1.77A4.9 4.9 0 015.45 2.53c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.3 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.4-.2a1.2 1.2 0 10-2.4 0 1.2 1.2 0 002.4 0zM12 9a3 3 0 110 6 3 3 0 010-6z" />
+                                </svg></a>
+                            <a href="https://www.facebook.com/igrejanovageracaooficial" target="_blank" rel="noopener"
+                                aria-label="Facebook da Igreja Nova Geração"><svg viewBox="0 0 24 24" aria-hidden="true"
+                                    focusable="false">
+                                    <path
+                                        d="M22 12a10 10 0 10-11.6 9.87v-6.98H7.9V12h2.5V9.8c0-2.47 1.47-3.84 3.72-3.84 1.08 0 2.2.19 2.2.19v2.43h-1.24c-1.22 0-1.6.76-1.6 1.53V12h2.72l-.44 2.89h-2.28v6.98A10 10 0 0022 12z" />
+                                </svg></a>
+                            <a href="https://www.youtube.com/joaomisael" target="_blank" rel="noopener"
+                                aria-label="Canal no YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"
+                                    focusable="false">
+                                    <path
+                                        d="M23.5 6.2a3 3 0 00-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.5v-7l6.3 3.5-6.3 3.5z" />
+                                </svg></a>
+                        </div>
+                    </div>
+
+                    <form class="contato-form reveal" id="contact-form"
+                        action="https://formsubmit.co/ajax/rochaanaclara602@gmail.com" method="POST" novalidate>
+                        <h3>Envie uma mensagem</h3>
+                        <p>Preencha o formulário e retornaremos o quanto antes.</p>
+
+                        <input type="hidden" name="_subject" value="Igreja Nova Geração | Nova mensagem de contato" />
+                        <input type="hidden" name="_template" value="box" />
+                        <input type="hidden" name="_captcha" value="false" />
+
+                        <div class="field">
+                            <label for="nome">Nome</label>
+                            <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required
+                                autocomplete="name" />
+                            <small class="field-error" data-error-for="nome"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required
+                                autocomplete="email" />
+                            <small class="field-error" data-error-for="email"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?"
+                                required></textarea>
+                            <small class="field-error" data-error-for="mensagem"></small>
+                        </div>
+
+                        <!-- honeypot anti-spam -->
+                        <div class="field field-hp" aria-hidden="true">
+                            <label for="site">Não preencha este campo</label>
+                            <input id="site" name="site" type="text" tabindex="-1" autocomplete="off" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                        <p class="form-status" id="form-status" role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de unidade -->
+    <div class="localidade-modal" id="localidade-modal" aria-hidden="true">
+        <div class="localidade-modal-overlay" data-localidade-close></div>
+        <div class="localidade-modal-content" role="dialog" aria-modal="true" aria-labelledby="localidade-modal-title">
+            <button type="button" class="localidade-modal-close" id="localidade-modal-close"
+                aria-label="Fechar">×</button>
+            <div class="localidade-modal-image">
+                <iframe id="localidade-modal-embed" class="localidade-modal-map-frame" src="" title="Mapa da unidade"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    aria-label="Mapa da localização da unidade"></iframe>
+                <span id="localidade-modal-city"></span>
+            </div>
+            <div class="localidade-modal-info">
+                <span class="localidade-modal-label" id="localidade-modal-label">Igreja Nova Geração</span>
+                <h3 id="localidade-modal-title">São Paulo</h3>
+                <div class="localidade-modal-address">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"></path>
+                        <circle cx="12" cy="10" r="2.5"></circle>
+                    </svg>
+                    <div>
+                        <small>Endereço</small>
+                        <p id="localidade-modal-address"></p>
+                    </div>
+                </div>
+                <a href="#" target="_blank" rel="noopener" class="localidade-modal-map" id="localidade-modal-map">
+                    <span>Abrir no Google Maps</span>
+                    <i aria-hidden="true">↗</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de evento -->
+    <div class="evento-modal" id="evento-modal" aria-hidden="true">
+        <div class="evento-modal-backdrop" data-evento-close></div>
+        <div class="evento-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="evento-modal-title">
+            <div class="evento-modal-media">
+                <img id="evento-modal-image" src="" alt="" />
+                <div class="evento-modal-overlay"></div>
+                <div class="evento-modal-date">
+                    <span id="evento-modal-month">SET</span><strong id="evento-modal-day">14</strong>
+                </div>
+                <span class="evento-modal-number" id="evento-modal-number" aria-hidden="true">01</span>
+            </div>
+            <div class="evento-modal-content">
+                <button class="evento-modal-close" type="button" aria-label="Fechar" data-evento-close>
+                    <span></span><span></span>
+                </button>
+                <span class="evento-modal-label">Próximo evento</span>
+                <h3 id="evento-modal-title"></h3>
+                <p class="evento-modal-description" id="evento-modal-description"></p>
+                <div class="evento-modal-info">
+                    <div class="evento-info-item">
+                        <span class="evento-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M12 7v5l3 2"></path>
+                            </svg></span>
+                        <div><small>Horário</small><strong id="evento-modal-time"></strong></div>
+                    </div>
+                    <div class="evento-info-item">
+                        <span class="evento-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="2.5"></circle>
+                            </svg></span>
+                        <div><small>Local</small><strong id="evento-modal-location"></strong></div>
+                    </div>
+                    <div class="evento-info-item">
+                        <span class="evento-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+                                <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+                                <path d="M16 2v4M8 2v4M3 10h18"></path>
+                            </svg></span>
+                        <div><small>Data</small><strong id="evento-modal-full-date"></strong></div>
+                    </div>
+                </div>
+                <div class="evento-modal-extra">
+                    <span>Saiba mais</span>
+                    <p id="evento-modal-extra"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-glow footer-glow-red" aria-hidden="true"></div>
+        <div class="footer-glow footer-glow-cyan" aria-hidden="true"></div>
+        <div class="wrap">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#topo" class="footer-logo" aria-label="Igreja Nova Geração — início">
+                        <span class="footer-logo-mark">
+                            <img src="assets/img/logo/logo_completa.png" alt="Igreja Nova Geração" loading="lazy" />
+                        </span>
+                    </a>
+                    <p>Uma igreja para viver <strong>fé, família e propósito.</strong></p>
+                </div>
+
+                <div class="footer-navigation">
+                    <span class="footer-label">Navegação</span>
+                    <nav aria-label="Navegação do rodapé">
+                        <a href="#quem-somos"><span aria-hidden="true">01</span>Quem somos<i
+                                aria-hidden="true">↗</i></a>
+                        <a href="#pastores"><span aria-hidden="true">02</span>Pastores<i aria-hidden="true">↗</i></a>
+                        <a href="#cultos"><span aria-hidden="true">03</span>Cultos<i aria-hidden="true">↗</i></a>
+                        <a href="#ministerios"><span aria-hidden="true">04</span>Ministérios<i
+                                aria-hidden="true">↗</i></a>
+                        <a href="#localidades"><span aria-hidden="true">05</span>Unidades<i aria-hidden="true">↗</i></a>
+                        <a href="#contato"><span aria-hidden="true">06</span>Contato<i aria-hidden="true">↗</i></a>
+                    </nav>
+                </div>
+
+                <div class="footer-social">
+                    <span class="footer-label">Acompanhe</span>
+                    <p>Continue conectado com a Nova Geração.</p>
+                    <div class="footer-social-links">
+                        <a href="https://instagram.com/igrejanovageracao" target="_blank"
+                            rel="noopener"><span>Instagram</span><i aria-hidden="true">↗</i></a>
+                        <a href="https://www.facebook.com/igrejanovageracaooficial" target="_blank"
+                            rel="noopener"><span>Facebook</span><i aria-hidden="true">↗</i></a>
+                        <a href="https://www.youtube.com/joaomisael" target="_blank"
+                            rel="noopener"><span>YouTube</span><i aria-hidden="true">↗</i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-statement">
+                <h2>Venha fazer parte <em>da nossa história.</em></h2>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© <span id="ano-atual">2026</span> Igreja Nova Geração. Todos os direitos reservados.</span>
+                <a class="footer-login-link" href="login.html">Área restrita</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

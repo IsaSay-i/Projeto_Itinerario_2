@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministérios | Nova Geração</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="icon" type="image/png" href="../assets/img/logo/novo_logo_coracao.png" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div id="sidebar-container"></div>
+
+        <div class="main-content">
+
+            <div id="header-container"></div>
+
+            <div class="page-content">
+
+                <div class="page-header">
+                    <div class="page-header__content">
+                        <h1 class="page-header__title">Ministérios</h1>
+                        <p class="page-header__description">Gerencie os ministérios e seus membros.</p>
+                    </div>
+                    <div class="page-header__actions">
+                        <button class="btn btn--primary" id="btnNovoMinisterio">
+                            <i class="fa-solid fa-plus"></i> Novo Ministério
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dashboard-card" style="margin-bottom: 24px;">
+                    <div class="dashboard-card__header">
+                        <h3 class="dashboard-card__title">Ministérios Cadastrados</h3>
+                    </div>
+                    <div class="dashboard-card__body" style="padding: 0;">
+                        <div class="data-table-wrapper" style="border: none; border-radius: 0;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ações</th>
+                                        <th>Nome do Ministério</th>
+                                        <th>Líder</th>
+                                        <th>Data de Criação</th>
+                                        <th>Qtd. Membros</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaMinisterios"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-heading">
+                    <div>
+                        <h3>Membros</h3>
+                        <p>Todos os membros cadastrados, de todos os ministérios.</p>
+                    </div>
+                </div>
+
+                <div class="table-toolbar">
+                    <div class="table-toolbar__left">
+                        <select class="form-control" id="filtroMinisterio" style="width: 240px;"></select>
+                    </div>
+                    <div class="table-toolbar__right">
+                        <button class="btn btn--primary" id="btnNovoMembro">
+                            <i class="fa-solid fa-user-plus"></i> Novo Membro
+                        </button>
+                    </div>
+                </div>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Ações</th>
+                                <th>Nome</th>
+                                <th>Contato</th>
+                                <th>Data de Nascimento</th>
+                                <th>Data de Entrada</th>
+                                <th>Ministério</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaMembros"></tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL: MINISTÉRIO -->
+    <div class="modal-root" id="modalMinisterio">
+        <div class="modal-backdrop" data-fechar-modal></div>
+        <div class="modal modal--small">
+            <div class="modal__header">
+                <div class="modal__header-content">
+                    <span class="modal__icon"><i class="fa-solid fa-people-group"></i></span>
+                    <div>
+                        <h3 class="modal__title" id="modalMinisterioTitulo">Novo Ministério</h3>
+                        <p class="modal__subtitle">Preencha os dados do ministério</p>
+                    </div>
+                </div>
+                <button class="modal__close" data-fechar-modal><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="formMinisterio">
+                <div class="modal__body">
+
+                    <div class="form-group">
+                        <label class="form-label">Nome do Ministério <span class="required">*</span></label>
+                        <input type="text" name="nome" class="form-control" placeholder="Ex: Louvor e Adoração" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Nome do Líder <span class="required">*</span></label>
+                        <input type="text" name="lider" class="form-control" placeholder="Ex: Rita" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Data de Criação <span class="required">*</span></label>
+                        <input type="date" name="dataCriacao" class="form-control" required>
+                    </div>
+
+                </div>
+
+                <div class="modal__footer">
+                    <button type="button" class="btn btn--ghost" data-fechar-modal>Cancelar</button>
+                    <button type="submit" class="btn btn--primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: MEMBRO -->
+    <div class="modal-root" id="modalMembro">
+        <div class="modal-backdrop" data-fechar-modal></div>
+        <div class="modal modal--small">
+            <div class="modal__header">
+                <div class="modal__header-content">
+                    <span class="modal__icon"><i class="fa-solid fa-user-plus"></i></span>
+                    <div>
+                        <h3 class="modal__title" id="modalMembroTitulo">Novo Membro</h3>
+                        <p class="modal__subtitle">Preencha os dados do membro</p>
+                    </div>
+                </div>
+                <button class="modal__close" data-fechar-modal><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="formMembro">
+                <div class="modal__body">
+
+                    <div class="form-group">
+                        <label class="form-label">Nome Completo <span class="required">*</span></label>
+                        <input type="text" name="nome" class="form-control" placeholder="Nome completo do membro" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Ministério <span class="required">*</span></label>
+                        <select name="ministerio" id="membroMinisterio" class="form-control" required></select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Data de Nascimento <span class="required">*</span></label>
+                            <input type="date" name="dataNascimento" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Data de Entrada <span class="required">*</span></label>
+                            <input type="date" name="dataEntrada" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Telefone / Contato <span class="required">*</span></label>
+                        <input type="tel" name="contato" class="form-control" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                </div>
+
+                <div class="modal__footer">
+                    <button type="button" class="btn btn--ghost" data-fechar-modal>Cancelar</button>
+                    <button type="submit" class="btn btn--primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/ministerios.js"></script>
+
+</body>
+
+</html>

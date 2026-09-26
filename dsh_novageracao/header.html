@@ -1,0 +1,127 @@
+<header class="header">
+
+    <div class="header__left">
+
+        <button type="button" class="header__menu-button" id="mobileMenuButton" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="header__page-info">
+            <span class="header__subtitle" data-header-subtitle>Administração</span>
+            <h1 data-header-title>Cockpit</h1>
+        </div>
+
+    </div>
+
+    <div class="header__right">
+
+        <button type="button" class="header__icon-button" data-theme-toggle title="Alterar tema">
+            <i class="fa-solid fa-moon" data-theme-icon></i>
+        </button>
+
+        <div class="notifications" id="notificationsMenu">
+
+            <button type="button" class="header__icon-button notification-button" id="notificationsButton" title="Notificações">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot" id="notificationDot" hidden></span>
+            </button>
+
+            <div class="notifications__dropdown" id="notificationsDropdown">
+                <div class="notifications__header">
+                    <strong>Notificações</strong>
+                    <span class="notifications__count" id="notificationsCount">0</span>
+                </div>
+                <div class="notifications__list" id="notificationsList"></div>
+            </div>
+
+        </div>
+
+        <div class="profile" id="profileMenu">
+
+            <button type="button" class="profile__button" id="profileButton">
+                <span class="profile__avatar" data-profile-avatar>A</span>
+                <span class="profile__info">
+                    <strong data-profile-nome>Administrador</strong>
+                    <small>Gestão</small>
+                </span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="profile__dropdown" id="profileDropdown">
+
+                <div class="profile__dropdown-header">
+                    <span class="profile__avatar profile__avatar--large" data-profile-avatar>A</span>
+                    <div>
+                        <strong data-profile-nome>Administrador</strong>
+                        <small>Administrador do sistema</small>
+                    </div>
+                </div>
+
+                <div class="profile__dropdown-divider"></div>
+
+                <button type="button" class="profile__dropdown-item" id="btnMeuPerfil">
+                    <i class="fa-regular fa-user"></i>
+                    Meu perfil
+                </button>
+
+                <button type="button" class="profile__dropdown-item" id="btnPreferencias">
+                    <i class="fa-solid fa-sliders"></i>
+                    Preferências
+                </button>
+
+                <div class="profile__dropdown-divider"></div>
+
+                <button type="button" class="profile__dropdown-item profile__dropdown-item--danger" id="logoutButton">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Sair
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="modal-root" id="modalMeuPerfil">
+    <div class="modal-backdrop" data-fechar-modal></div>
+    <div class="modal modal--small">
+        <div class="modal__header">
+            <div class="modal__header-content">
+                <span class="modal__icon"><i class="fa-regular fa-user"></i></span>
+                <div>
+                    <h3 class="modal__title">Meu Perfil</h3>
+                    <p class="modal__subtitle">Atualize seus dados de acesso</p>
+                </div>
+            </div>
+            <button class="modal__close" data-fechar-modal><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <form id="formMeuPerfil">
+            <div class="modal__body">
+
+                <div class="form-group">
+                    <label class="form-label">Nome</label>
+                    <input type="text" name="nome" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">E-mail</label>
+                    <input type="email" name="email" class="form-control" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Nova Senha</label>
+                    <input type="password" name="senha" class="form-control" placeholder="Deixe em branco para manter a atual">
+                </div>
+
+            </div>
+
+            <div class="modal__footer">
+                <button type="button" class="btn btn--ghost" data-fechar-modal>Cancelar</button>
+                <button type="submit" class="btn btn--primary">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

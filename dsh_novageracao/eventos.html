@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos | Nova Geração</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="icon" type="image/png" href="../assets/img/logo/novo_logo_coracao.png" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div id="sidebar-container"></div>
+
+        <div class="main-content">
+
+            <div id="header-container"></div>
+
+            <div class="page-content">
+
+                <div class="page-header">
+                    <div class="page-header__content">
+                        <h1 class="page-header__title">Eventos</h1>
+                        <p class="page-header__description">Cadastre e acompanhe os eventos da igreja.</p>
+                    </div>
+                    <div class="page-header__actions">
+                        <button class="btn btn--primary" id="btnNovoEvento">
+                            <i class="fa-solid fa-plus"></i> Novo Evento
+                        </button>
+                    </div>
+                </div>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Ações</th>
+                                <th>Nome do Evento</th>
+                                <th>Data</th>
+                                <th>Hora</th>
+                                <th>Responsável</th>
+                                <th>Endereço</th>
+                                <th>Cartaz</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaEventos"></tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL: EVENTO -->
+    <div class="modal-root" id="modalEvento">
+        <div class="modal-backdrop" data-fechar-modal></div>
+        <div class="modal modal--medium">
+            <div class="modal__header">
+                <div class="modal__header-content">
+                    <span class="modal__icon"><i class="fa-solid fa-calendar-days"></i></span>
+                    <div>
+                        <h3 class="modal__title" id="modalEventoTitulo">Novo Evento</h3>
+                        <p class="modal__subtitle">Preencha os dados do evento</p>
+                    </div>
+                </div>
+                <button class="modal__close" data-fechar-modal><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="formEvento">
+                <div class="modal__body">
+
+                    <div class="form-group">
+                        <label class="form-label">Nome do Evento <span class="required">*</span></label>
+                        <input type="text" name="nome" class="form-control" placeholder="Ex: Culto de Ação de Graças"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Cartaz do Evento</label>
+                        <div class="image-upload">
+                            <div class="image-upload__preview" id="eventoImagemPreview">
+                                <i class="fa-regular fa-image"></i>
+                            </div>
+                            <div class="image-upload__actions">
+                                <input type="file" id="eventoImagem" accept="image/*" class="form-control">
+                                <span class="image-upload__hint">JPG ou PNG (opcional)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Data <span class="required">*</span></label>
+                            <input type="date" name="data" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Hora <span class="required">*</span></label>
+                            <input type="time" name="hora" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Responsável <span class="required">*</span></label>
+                        <input type="text" name="responsavel" class="form-control" placeholder="Nome do responsável"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Endereço <span class="required">*</span></label>
+                        <input type="text" name="endereco" class="form-control" placeholder="Local do evento" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Descrição</label>
+                        <textarea name="descricao" class="form-control"
+                            placeholder="Detalhes sobre o evento"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="modal__footer">
+                    <button type="button" class="btn btn--ghost" data-fechar-modal>Cancelar</button>
+                    <button type="submit" class="btn btn--primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/eventos.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Gestão de Ministérios - Igreja Nova Geração">
+    <title>Login | Nova Geração</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/img/logo/novo_logo_coracao.png" />
+
+   <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <section class="login-visual">
+            <div class="visual-overlay"></div>
+            <div class="visual-content">
+                <div class="brand">
+                    <div class="brand-logo">
+                        <img src="assets/img/logo/logo_completa.png" alt="Igreja Nova Geração">
+                    </div>
+                </div>
+
+                <div class="visual-text">
+                    <span class="visual-tag">GESTÃO DE MINISTÉRIOS</span>
+                    <h1>Servir também é <span>organizar.</span></h1>
+                    <p>Uma plataforma criada para facilitar a gestão, o acompanhamento e o cuidado com cada ministério
+                        da Igreja Nova Geração.</p>
+                </div>
+
+                <div class="visual-footer">
+                    <div class="footer-line"></div>
+                    <span>Igreja Nova Geração</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="login-container">
+
+            <div class="login-box">
+
+                <div class="mobile-logo">
+                    <img src="assets/img/logo/logo_completa.png" alt="Igreja Nova Geração">
+                </div>
+
+                <div class="login-header">
+                    <span class="login-label">ÁREA ADMINISTRATIVA</span>
+                    <h2>Bem-vindo de volta</h2>
+                    <p>Acesse sua conta para continuar.</p>
+                </div>
+
+                <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+
+                <form id="loginForm" class="login-form" novalidate>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="seuemail@igreja.com"
+                                autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="password-label">
+                            <label for="senha">Senha</label>
+                            <a href="#" id="forgotPassword">Esqueci minha senha</a>
+                        </div>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
+                                autocomplete="current-password" required>
+                            <button type="button" id="togglePassword" class="toggle-password"
+                                aria-label="Mostrar senha">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="remember">
+                            <input type="checkbox" id="remember">
+                            <span class="custom-checkbox"></span>
+                            <span>Lembrar de mim</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        <span>Entrar</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <div class="login-divider">
+                    <span></span>
+                    <small>acesso restrito</small>
+                    <span></span>
+                </div>
+
+                <button type="button" class="admin-validation-button" id="openAdmin">
+                    <i class="fa-solid fa-user-shield"></i> Área de validação administrativa
+                </button>
+
+                <div class="login-security">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Ambiente exclusivo para administradores</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+   <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>

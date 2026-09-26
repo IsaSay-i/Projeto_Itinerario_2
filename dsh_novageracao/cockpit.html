@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cockpit | Nova Geração</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <link rel="icon" type="image/png" href="../assets/img/logo/novo_logo_coracao.png" />
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div id="sidebar-container"></div>
+
+        <div class="main-content">
+
+            <div id="header-container"></div>
+
+            <div class="dashboard">
+
+                <div class="dashboard__welcome">
+                    <h2>Bem-vindo(a) de volta</h2>
+                    <p>Aqui está um resumo da gestão da Igreja Nova Geração.</p>
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-card__icon"><i class="fa-solid fa-users"></i></div>
+                        <span class="stat-card__value" id="statMembros">0</span>
+                        <span class="stat-card__label">Total de Membros</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card__icon"><i class="fa-solid fa-people-group"></i></div>
+                        <span class="stat-card__value" id="statMinisterios">0</span>
+                        <span class="stat-card__label">Ministérios</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card__icon"><i class="fa-solid fa-calendar-days"></i></div>
+                        <span class="stat-card__value" id="statEventos">0</span>
+                        <span class="stat-card__label">Eventos</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card__icon"><i class="fa-solid fa-water"></i></div>
+                        <span class="stat-card__value" id="statBatismos">0</span>
+                        <span class="stat-card__label">Batismos</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card__icon"><i class="fa-solid fa-chart-simple"></i></div>
+                        <span class="stat-card__value" id="statUltimoCulto">—</span>
+                        <span class="stat-card__label">Último Culto</span>
+                    </div>
+
+                </div>
+
+                <div class="dashboard__grid--main">
+
+                    <div class="dashboard-card">
+                        <div class="dashboard-card__header">
+                            <h3 class="dashboard-card__title">Frequência dos Últimos 5 Cultos</h3>
+                        </div>
+                        <div class="dashboard-card__body">
+                            <div class="chart-container" id="graficoFrequenciaWrapper">
+                                <canvas id="graficoFrequencia"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="dashboard-card__header">
+                            <h3 class="dashboard-card__title">Próximos Eventos</h3>
+                            <a href="eventos.html" class="btn btn--ghost btn--small">Ver todos</a>
+                        </div>
+                        <div class="dashboard-card__body">
+                            <div class="events-list" id="proximosEventos"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dashboard__grid--secondary">
+
+                    <div class="dashboard-card">
+                        <div class="dashboard-card__header">
+                            <h3 class="dashboard-card__title">Resumo Geral</h3>
+                        </div>
+                        <div class="dashboard-card__body">
+                            <div class="summary-list" id="resumoGeral"></div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="dashboard-card__header">
+                            <h3 class="dashboard-card__title">Ações Rápidas</h3>
+                        </div>
+                        <div class="dashboard-card__body">
+                            <div class="quick-actions">
+                                <a href="ministerios.html?novo=1" class="btn btn--ghost">
+                                    <i class="fa-solid fa-people-group"></i> Novo Ministério
+                                </a>
+                                <a href="eventos.html?novo=1" class="btn btn--ghost">
+                                    <i class="fa-solid fa-calendar-plus"></i> Novo Evento
+                                </a>
+                                <a href="batismo.html?novo=1" class="btn btn--ghost">
+                                    <i class="fa-solid fa-water"></i> Novo Batismo
+                                </a>
+                                <a href="relatorio-culto.html?novo=1" class="btn btn--ghost">
+                                    <i class="fa-solid fa-clipboard-list"></i> Registrar Culto
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/cockpit.js"></script>
+
+</body>
+
+</html>
