@@ -26,17 +26,19 @@
 
             <div class="page-content">
 
-                <div class="page-header">
-                    <div class="page-header__content">
-                        <h1 class="page-header__title">Ministérios</h1>
-                        <p class="page-header__description">Gerencie os ministérios e seus membros.</p>
+                <section class="dashboard__welcome" aria-labelledby="pageWelcomeTitle">
+                    <div class="dashboard__welcome-copy">
+                        <span class="dashboard__eyebrow">GESTÃO DE EQUIPES</span>
+                        <h2 id="pageWelcomeTitle">Ministérios e pessoas que fazem a diferença.</h2>
+                        <p>Organize os ministérios e acompanhe os membros da comunidade.</p>
                     </div>
-                    <div class="page-header__actions">
+                    <div class="dashboard__welcome-actions">
+                        <time class="dashboard__today" data-current-date></time>
                         <button class="btn btn--primary" id="btnNovoMinisterio">
                             <i class="fa-solid fa-plus"></i> Novo Ministério
                         </button>
                     </div>
-                </div>
+                </section>
 
                 <div class="dashboard-card" style="margin-bottom: 24px;">
                     <div class="dashboard-card__header">
@@ -60,21 +62,42 @@
                     </div>
                 </div>
 
-                <div class="section-heading">
-                    <div>
-                        <h3>Membros</h3>
-                        <p>Todos os membros cadastrados, de todos os ministérios.</p>
+                <section class="dashboard__welcome" aria-labelledby="membersWelcomeTitle">
+                    <div class="dashboard__welcome-copy">
+                        <span class="dashboard__eyebrow">GESTÃO DE MEMBROS</span>
+                        <h2 id="membersWelcomeTitle">Pessoas e ministérios em movimento.</h2>
+                        <p>Consulte e organize os membros cadastrados em todos os ministérios.</p>
                     </div>
-                </div>
-
-                <div class="table-toolbar">
-                    <div class="table-toolbar__left">
-                        <select class="form-control" id="filtroMinisterio" style="width: 240px;"></select>
-                    </div>
-                    <div class="table-toolbar__right">
+                    <div class="dashboard__welcome-actions">
+                        <time class="dashboard__today" data-current-date></time>
                         <button class="btn btn--primary" id="btnNovoMembro">
-                            <i class="fa-solid fa-user-plus"></i> Novo Membro
+                            <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Novo Membro
                         </button>
+                    </div>
+                </section>
+
+                <div class="table-toolbar members-filter-toolbar">
+                    <div class="table-toolbar__left members-filter">
+                        <div class="members-filter__control">
+                            <div class="members-filter__heading">
+                                <span class="members-filter__icon" aria-hidden="true">
+                                    <i class="fa-solid fa-filter"></i>
+                                </span>
+                                <div>
+                                    <label class="members-filter__label" for="filtroMinisterio">Filtrar por ministério</label>
+                                    <span class="members-filter__hint">Encontre membros de uma equipe específica.</span>
+                                </div>
+                            </div>
+                            <div class="members-filter__select">
+                                <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                                <select class="form-control" id="filtroMinisterio" aria-label="Filtrar membros por ministério"></select>
+                            </div>
+                        </div>
+                        <button type="button" class="members-filter__clear" id="limparFiltroMinisterio" hidden>
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                            Limpar filtro
+                        </button>
+                        <span class="members-filter__count" id="contagemMembros" aria-live="polite"></span>
                     </div>
                 </div>
 

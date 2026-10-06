@@ -3,12 +3,16 @@ let membroEditando = null; // { ministerioId, membroId }
 
 document.addEventListener("DOMContentLoaded", function () {
     renderMinisterios();
-    renderMembros();
     popularSelectsDeMinisterio();
+    renderMembros();
 
     document.getElementById("btnNovoMinisterio").addEventListener("click", () => abrirModalMinisterio());
     document.getElementById("btnNovoMembro").addEventListener("click", () => abrirModalMembro());
     document.getElementById("filtroMinisterio").addEventListener("change", renderMembros);
+    document.getElementById("limparFiltroMinisterio").addEventListener("click", () => {
+        document.getElementById("filtroMinisterio").value = "";
+        renderMembros();
+    });
 
     document.getElementById("formMinisterio").addEventListener("submit", salvarMinisterio);
     document.getElementById("formMembro").addEventListener("submit", salvarMembro);
@@ -102,8 +106,8 @@ function salvarMinisterio(event) {
     Store.save(Store.KEYS.ministerios, ministerios);
     Modal.close("modalMinisterio");
     renderMinisterios();
-    renderMembros();
     popularSelectsDeMinisterio();
+    renderMembros();
 }
 
 function excluirMinisterio(id) {
@@ -121,8 +125,8 @@ function excluirMinisterio(id) {
     Toast.show("info", "Ministério excluído", `${ministerio.nome} foi removido.`);
 
     renderMinisterios();
-    renderMembros();
     popularSelectsDeMinisterio();
+    renderMembros();
 }
 
 /* ============================================================
@@ -136,19 +140,27 @@ function obterTodosMembros() {
 }
 
 function renderMembros() {
-    const filtro = document.getElementById("filtroMinisterio").value;
+    const filtroSelect = document.getElementById("filtroMinisterio");
+    const filtro = filtroSelect.value;
     const tbody = document.getElementById("tabelaMembros");
 
-    let membros = obterTodosMembros();
+    const todosMembros = obterTodosMembros();
+    let membros = todosMembros;
     if (filtro) {
         membros = membros.filter((m) => m.ministerioId === filtro);
     }
 
+    const botaoLimpar = document.getElementById("limparFiltroMinisterio");
+    botaoLimpar.hidden = !filtro;
+    document.getElementById("contagemMembros").textContent = filtro
+        ? `Mostrando ${membros.length} de ${todosMembros.length} ${todosMembros.length === 1 ? "membro" : "membros"}`
+        : `${todosMembros.length} ${todosMembros.length === 1 ? "membro cadastrado" : "membros cadastrados"}`;
+
     if (membros.length === 0) {
         tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state">
             <div class="empty-state__icon"><i class="fa-solid fa-user-group"></i></div>
-            <h3>Nenhum membro encontrado</h3>
-            <p>Cadastre um novo membro ou ajuste o filtro selecionado.</p>
+            <h3>${filtro ? "Nenhum membro neste ministério" : "Nenhum membro cadastrado"}</h3>
+            <p>${filtro ? "Limpe o filtro ou escolha outro ministério para ver os membros." : "Cadastre um novo membro para começar."}</p>
         </div></td></tr>`;
         return;
     }
@@ -180,10 +192,22 @@ function renderMembros() {
 
 function popularSelectsDeMinisterio() {
     const ministerios = Store.get(Store.KEYS.ministerios);
-    const opcoes = ministerios.map((m) => `<option value="${m.id}">${m.nome}</option>`).join("");
+    const filtro = document.getElementById("filtroMinisterio");
+    const filtroAtual = filtro.value;
+    filtro.replaceChildren(new Option("Todos os ministérios", ""));
+    ministerios.forEach((ministerio) => {
+        filtro.add(new Option(ministerio.nome, ministerio.id));
+    });
+    filtro.value = ministerios.some((ministerio) => ministerio.id === filtroAtual)
+        ? filtroAtual
+        : "";
 
-    document.getElementById("filtroMinisterio").innerHTML = `<option value="">Todos os ministérios</option>${opcoes}`;
-    document.getElementById("membroMinisterio").innerHTML = `<option value="" disabled selected>Selecione...</option>${opcoes}`;
+    const selectMinisterioMembro = document.getElementById("membroMinisterio");
+    selectMinisterioMembro.replaceChildren(new Option("Selecione...", "", true, true));
+    selectMinisterioMembro.options[0].disabled = true;
+    ministerios.forEach((ministerio) => {
+        selectMinisterioMembro.add(new Option(ministerio.nome, ministerio.id));
+    });
 }
 
 function abrirModalMembro(ministerioId = null, membroId = null) {

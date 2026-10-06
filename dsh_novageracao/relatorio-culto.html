@@ -29,17 +29,19 @@
 
             <div class="page-content">
 
-                <div class="page-header">
-                    <div class="page-header__content">
-                        <h1 class="page-header__title">Relatório de Culto</h1>
-                        <p class="page-header__description">Registre a presença de cada culto realizado.</p>
+                <section class="dashboard__welcome" aria-labelledby="pageWelcomeTitle">
+                    <div class="dashboard__welcome-copy">
+                        <span class="dashboard__eyebrow">REGISTRO DE PRESENÇA</span>
+                        <h2 id="pageWelcomeTitle">Acompanhe cada encontro da comunidade.</h2>
+                        <p>Registre a participação nos cultos e consulte o histórico da igreja.</p>
                     </div>
-                    <div class="page-header__actions">
+                    <div class="dashboard__welcome-actions">
+                        <time class="dashboard__today" data-current-date></time>
                         <button class="btn btn--primary" id="btnNovoRelatorio">
                             <i class="fa-solid fa-plus"></i> Novo Registro
                         </button>
                     </div>
-                </div>
+                </section>
 
                 <div class="data-table-wrapper">
                     <table class="data-table">

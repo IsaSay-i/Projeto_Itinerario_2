@@ -28,12 +28,22 @@
 
             <div class="dashboard">
 
-                <div class="dashboard__welcome">
-                    <h2>Bem-vindo(a) de volta</h2>
-                    <p>Aqui está um resumo da gestão da Igreja Nova Geração.</p>
-                </div>
+                <section class="dashboard__welcome" aria-labelledby="dashboardTitle">
+                    <div class="dashboard__welcome-copy">
+                        <span class="dashboard__eyebrow">PAINEL ADMINISTRATIVO</span>
+                        <h2 id="dashboardTitle">Gestão à vista, cuidado em cada detalhe.</h2>
+                        <p>Acompanhe os principais indicadores e atividades da Igreja Nova Geração.</p>
+                    </div>
+                    <div class="dashboard__welcome-actions">
+                        <time class="dashboard__today" data-current-date></time>
+                        <a href="relatorio-culto.html?novo=1" class="btn btn--primary">
+                            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                            Registrar culto
+                        </a>
+                    </div>
+                </section>
 
-                <div class="stats-grid">
+                <section class="stats-grid" aria-label="Indicadores gerais">
 
                     <div class="stat-card">
                         <div class="stat-card__icon"><i class="fa-solid fa-users"></i></div>
@@ -62,16 +72,23 @@
                     <div class="stat-card">
                         <div class="stat-card__icon"><i class="fa-solid fa-chart-simple"></i></div>
                         <span class="stat-card__value" id="statUltimoCulto">—</span>
-                        <span class="stat-card__label">Último Culto</span>
+                        <span class="stat-card__label">Participantes no último culto</span>
                     </div>
 
-                </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <span class="stat-card__value" id="statCultos">0</span>
+                        <span class="stat-card__label">Cultos registrados</span>
+                    </div>
+
+                </section>
 
                 <div class="dashboard__grid--main">
 
                     <div class="dashboard-card">
                         <div class="dashboard-card__header">
                             <h3 class="dashboard-card__title">Frequência dos Últimos 5 Cultos</h3>
+                            <span class="dashboard-card__caption">PRESENÇA</span>
                         </div>
                         <div class="dashboard-card__body">
                             <div class="chart-container" id="graficoFrequenciaWrapper">
@@ -83,7 +100,7 @@
                     <div class="dashboard-card">
                         <div class="dashboard-card__header">
                             <h3 class="dashboard-card__title">Próximos Eventos</h3>
-                            <a href="eventos.html" class="btn btn--ghost btn--small">Ver todos</a>
+                            <a href="eventos.html" class="dashboard-card__link">Ver agenda <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                         <div class="dashboard-card__body">
                             <div class="events-list" id="proximosEventos"></div>
@@ -110,16 +127,24 @@
                         <div class="dashboard-card__body">
                             <div class="quick-actions">
                                 <a href="ministerios.html?novo=1" class="btn btn--ghost">
-                                    <i class="fa-solid fa-people-group"></i> Novo Ministério
+                                    <span class="quick-actions__icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+                                    <span class="quick-actions__label">Novo Ministério</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square quick-actions__arrow" aria-hidden="true"></i>
                                 </a>
                                 <a href="eventos.html?novo=1" class="btn btn--ghost">
-                                    <i class="fa-solid fa-calendar-plus"></i> Novo Evento
+                                    <span class="quick-actions__icon"><i class="fa-solid fa-calendar-plus" aria-hidden="true"></i></span>
+                                    <span class="quick-actions__label">Novo Evento</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square quick-actions__arrow" aria-hidden="true"></i>
                                 </a>
                                 <a href="batismo.html?novo=1" class="btn btn--ghost">
-                                    <i class="fa-solid fa-water"></i> Novo Batismo
+                                    <span class="quick-actions__icon"><i class="fa-solid fa-water" aria-hidden="true"></i></span>
+                                    <span class="quick-actions__label">Novo Batismo</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square quick-actions__arrow" aria-hidden="true"></i>
                                 </a>
                                 <a href="relatorio-culto.html?novo=1" class="btn btn--ghost">
-                                    <i class="fa-solid fa-clipboard-list"></i> Registrar Culto
+                                    <span class="quick-actions__icon"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></span>
+                                    <span class="quick-actions__label">Registrar Culto</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square quick-actions__arrow" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>

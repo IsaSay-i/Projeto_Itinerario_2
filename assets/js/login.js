@@ -8,10 +8,10 @@ const REDIRECT_URL = "dsh_novageracao/cockpit.html";
 
 const Auth = {
   garantirUsuarioPadrao() {
-    if (localStorage.getItem(CHAVES.usuarios)) return;
+    if (this.listarUsuarios().length > 0) return;
     const admin = [
       {
-        id: crypto.randomUUID(),
+        id: globalThis.crypto?.randomUUID?.() || `admin-${Date.now()}`,
         email: "admin@ng.com.br",
         senha: "Admin@123",
         nome: "Administrador",
@@ -22,12 +22,23 @@ const Auth = {
   },
 
   listarUsuarios() {
-    return JSON.parse(localStorage.getItem(CHAVES.usuarios)) || [];
+    const usuariosSalvos = localStorage.getItem(CHAVES.usuarios);
+    if (!usuariosSalvos) return [];
+
+    const usuarios = JSON.parse(usuariosSalvos);
+    if (!Array.isArray(usuarios)) {
+      throw new Error("A lista de usuários salva no navegador é inválida.");
+    }
+    return usuarios;
   },
 
   validar(email, senha) {
     return this.listarUsuarios().find(
-      (u) => u.email.toLowerCase() === email.toLowerCase() && u.senha === senha,
+      (u) =>
+        u &&
+        typeof u.email === "string" &&
+        u.email.toLowerCase() === email.toLowerCase() &&
+        u.senha === senha,
     );
   },
 
@@ -44,8 +55,6 @@ const Auth = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  Auth.garantirUsuarioPadrao();
-
   const form = document.querySelector("#loginForm");
   const emailInput = document.querySelector("#email");
   const passwordInput = document.querySelector("#senha");
@@ -60,6 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
     statusMessage.textContent = message;
     statusMessage.className = `status-message show ${type}`;
   };
+
+  let inicializacaoOk = true;
+  try {
+    Auth.garantirUsuarioPadrao();
+  } catch (error) {
+    inicializacaoOk = false;
+    console.error("Não foi possível inicializar o acesso administrativo:", error);
+    showMessage(
+      "Não foi possível preparar o acesso administrativo. Verifique os dados salvos deste site no navegador.",
+      "error",
+    );
+  }
 
   togglePassword?.addEventListener("click", () => {
     const visible = passwordInput.type === "password";
@@ -81,10 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     const email = emailInput?.value.trim().toLowerCase();
-    const senha = passwordInput?.value.trim();
+    const senha = passwordInput?.value ?? "";
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showMessage("Informe um e-mail válido.", "error");
+      return;
+    }
+
+    if (!inicializacaoOk) {
+      showMessage(
+        "O acesso administrativo não foi inicializado. Verifique os dados salvos deste site no navegador.",
+        "error",
+      );
       return;
     }
 

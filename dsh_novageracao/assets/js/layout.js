@@ -59,7 +59,22 @@
 
     function iniciar() {
         if (!verificarSessao()) return;
+        preencherDataAtual();
         carregarLayout();
+    }
+
+    function preencherDataAtual() {
+        const formatador = new Intl.DateTimeFormat("pt-BR", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+        const data = formatador.format(new Date()).replace(/^./, (letra) => letra.toLocaleUpperCase("pt-BR"));
+
+        document.querySelectorAll("[data-current-date]").forEach((elemento) => {
+            elemento.textContent = data;
+        });
     }
 
     function verificarSessao() {
@@ -144,13 +159,13 @@
         const overlay = document.getElementById("sidebarOverlay");
 
         function abrir() {
-            sidebar?.classList.add("is-mobile-open");
+            sidebar?.classList.add("is-open");
             overlay?.classList.add("is-visible");
             document.body.classList.add("menu-open");
         }
 
         function fechar() {
-            sidebar?.classList.remove("is-mobile-open");
+            sidebar?.classList.remove("is-open");
             overlay?.classList.remove("is-visible");
             document.body.classList.remove("menu-open");
         }
@@ -405,7 +420,7 @@
         document.addEventListener("keydown", function (event) {
             if (event.key !== "Escape") return;
 
-            document.getElementById("sidebar")?.classList.remove("is-mobile-open");
+            document.getElementById("sidebar")?.classList.remove("is-open");
             document.getElementById("sidebarOverlay")?.classList.remove("is-visible");
             document.body.classList.remove("menu-open");
             document.getElementById("profileDropdown")?.classList.remove("is-open");

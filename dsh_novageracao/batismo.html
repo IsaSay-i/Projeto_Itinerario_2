@@ -28,17 +28,19 @@
 
             <div class="page-content">
 
-                <div class="page-header">
-                    <div class="page-header__content">
-                        <h1 class="page-header__title">Batismo</h1>
-                        <p class="page-header__description">Cadastre e acompanhe os candidatos ao batismo.</p>
+                <section class="dashboard__welcome" aria-labelledby="pageWelcomeTitle">
+                    <div class="dashboard__welcome-copy">
+                        <span class="dashboard__eyebrow">ACOMPANHAMENTO PASTORAL</span>
+                        <h2 id="pageWelcomeTitle">Uma jornada de fé, acolhida com cuidado.</h2>
+                        <p>Acompanhe os candidatos e organize os registros de batismo.</p>
                     </div>
-                    <div class="page-header__actions">
+                    <div class="dashboard__welcome-actions">
+                        <time class="dashboard__today" data-current-date></time>
                         <button class="btn btn--primary" id="btnNovoBatismo">
                             <i class="fa-solid fa-plus"></i> Novo Batismo
                         </button>
                     </div>
-                </div>
+                </section>
 
                 <div class="data-table-wrapper">
                     <table class="data-table">

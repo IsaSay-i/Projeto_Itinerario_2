@@ -28,17 +28,19 @@
 
             <div class="page-content">
 
-                <div class="page-header">
-                    <div class="page-header__content">
-                        <h1 class="page-header__title">Eventos</h1>
-                        <p class="page-header__description">Cadastre e acompanhe os eventos da igreja.</p>
+                <section class="dashboard__welcome" aria-labelledby="pageWelcomeTitle">
+                    <div class="dashboard__welcome-copy">
+                        <span class="dashboard__eyebrow">AGENDA DA IGREJA</span>
+                        <h2 id="pageWelcomeTitle">Encontros que aproximam a comunidade.</h2>
+                        <p>Planeje os próximos eventos e mantenha as informações da igreja organizadas.</p>
                     </div>
-                    <div class="page-header__actions">
+                    <div class="dashboard__welcome-actions">
+                        <time class="dashboard__today" data-current-date></time>
                         <button class="btn btn--primary" id="btnNovoEvento">
                             <i class="fa-solid fa-plus"></i> Novo Evento
                         </button>
                     </div>
-                </div>
+                </section>
 
                 <div class="data-table-wrapper">
                     <table class="data-table">
